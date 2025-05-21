@@ -5,3 +5,6 @@ export default function Index() {
   return <Redirect href="/(auth)/login" />
   
 }
+
+
+// https://internal-macaw-10.clerk.accounts.dev

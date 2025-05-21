@@ -1,16 +1,13 @@
-import { Link, Stack } from "expo-router";
-import { Text, View } from "react-native";
+import { useAuth } from "@clerk/clerk-expo";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
+  const {signOut} = useAuth()
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-            <Link href={"/notification"}>Home page of the tabs</Link>
+    <View>
+            <TouchableOpacity onPress={() => signOut()}>
+    <Text style={{color:  "green"}}>Sign OUT</Text>
+            </TouchableOpacity>
     </View>
   );
 }
